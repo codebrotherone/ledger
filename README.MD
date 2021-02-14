@@ -174,6 +174,12 @@ An API that separates endpoints into logically separate operations is a much bet
 approach, and would have been what I wanted to accomplish had I not spent so much time
 fighting against the querying capabilities of sqlite :(
 
-Additionally, I would have liked to implement a better method for handling boolean
-comparisons on the features themselves. 
-
+*Additionally, I would have liked to implement*:
+1. Added support for handling all boolean comparisons on the features themselves. 
+2. Custom exception handling to avoid having to repeat code when raising issues. 
+3. Query Builder that would consolidate all query syntax formatting and building 
+to one class file.
+4. More robust db connection handling - perhaps a metaclass or a module that can 
+   manage a pool of connections without having to re-instantiate them. In this case,
+   I used a module class that will instantiate one connection each time it is called. 
+   
